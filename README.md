@@ -10,6 +10,27 @@ Internal project template for ExploratorLabs.
 - [React 17.0.2](https://reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - [MobX](https://mobx.js.org/README.html)
+- Remove [Turbolinks](https://github.com/turbolinks/turbolinks)
+
+## How to use this template?
+
+- Folk this repo
+- Clone the repo down to your machine [How?](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-clone)
+- Install and switch your Ruby version to align with `.ruby-version`
+- Install and switch your Node version to align with `.nvmrc`
+- Run `yarn` and `bundle` to install all packages and gems
+- Regenerate master key and new credentials file with the following steps
+  - Remove `config/credentials.yml.env` file
+  - Run `EDITOR=nano rails credentials:edit` to regenerate a new credentials file and `master.key`
+- Change application's name in the following files
+  - `app/views/layouts/application.html.erb`
+  - `package.json`
+  - `config/database.yml` - development, production and test database name
+- Setup database with `bundle exec rails db:setup`
+
+## Useful guides
+
+- How to set environment variables? [Here](https://medium.com/cedarcode/rails-5-2-credentials-9b3324851336)
 
 ## References:
 
