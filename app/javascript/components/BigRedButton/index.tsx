@@ -1,18 +1,12 @@
 import React, { useMemo } from "react";
-import styled from "styled-components";
 import { observer } from "mobx-react-lite";
 import BigRedButtonUI from "./BigRedButtonUI";
+import { ButtonContainer } from "./UIComponents";
 
 type Props = {
   buttonColor: string;
   buttonText: string;
 };
-
-const ButtonContainer = styled.div`
-  padding: 1em;
-  width: fit-content;
-  ${({ color }) => `background-color: ${color};`};
-`;
 
 const BigRedButton: React.FC = observer(
   ({ buttonColor, buttonText }: Props) => {

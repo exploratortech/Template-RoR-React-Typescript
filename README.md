@@ -55,13 +55,24 @@ This template is built with the following features, tools, and frameworks
 1. Spin up your environment with `foreman start -f Procfile.dev`
 1. Now you can access the app via `http://localhost:3000`
 
-## How to create a React component
+## How to create a React component (Best practices)
+
+We would like to separate the React components into View (`.tsx`) and Controller(`...UI.ts`) both by file and logically. We want to let the view file to handle as little logic as possible, while controller knows about the view as little as possible. That way we can ensure the maintainability of that component.
 
 ### In-page component [Ref](https://github.com/reactjs/react-rails/blob/master/README.md#4-generate-your-first-component)
 
 In-page component is React component that is being mounted inside an `erb` page, as oppose to page component.
 
-1. Run `rails g react:component ComponentName`
+Each component must have a MobX store which handle most of the logic of that component (e.g. onClick func, dynamic content, state, etc).
+
+If the number of styled component is more than 15, consider moving them to a separating them to a new file call `UIComponents.tsx`
+
+Sample component: `app/javascript/components/BigRedButton` , `app/views/home/landing.html.erb`
+
+1. Create a new folder `ComponentName` under `app/javascript/components`
+1. Create a component file `index.tsx` in that folder
+1. Create a MobX store file `ComponentNameUI.tx` in that folder
+1. Attach the react component in `erb` file with `<%= react_component("ComponentName", { prop1: "Something", prop2: "Interesting" }) %>`
 
 ### Page component [Ref](https://github.com/reactjs/react-rails/blob/master/README.md#controller-actions)
 
