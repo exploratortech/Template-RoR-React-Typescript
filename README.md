@@ -57,7 +57,7 @@ This template is built with the following features, tools, and frameworks
 
 We would like to separate the React components into View (`.tsx`) and Controller(`...UI.ts`) both by file and logically. We want to let the view file to handle as little logic as possible, while controller knows about the view as little as possible. That way we can ensure the maintainability of that component.
 
-### In-page component [Ref](https://github.com/reactjs/react-rails/blob/master/README.md#4-generate-your-first-component)
+### In-page component
 
 In-page component is React component that is being mounted inside an `erb` page, as oppose to page component.
 
@@ -69,12 +69,29 @@ Sample component: `app/javascript/components/BigRedButton` , `app/views/home/lan
 
 1. Create a new folder `ComponentName` under `app/javascript/components`
 1. Create a component file `index.tsx` in that folder
-1. Create a MobX store file `ComponentNameUI.tx` in that folder
+1. Create a MobX store file `ComponentNameUI.ts` in that folder
 1. Attach the react component in `erb` file with `<%= react_component("ComponentName", { prop1: "Something", prop2: "Interesting" }) %>`
 
-### Page component [Ref](https://github.com/reactjs/react-rails/blob/master/README.md#controller-actions)
+[Ref](https://github.com/reactjs/react-rails/blob/master/README.md#4-generate-your-first-component)
+
+### Page component
 
 Page component is React component that is intended to be rendered as a page or controller action directly.
+
+Same principles applied from [In-page component](#in-page-component). Each page component must have a MobX store which handles the logic of that component (e.g. onClick func, dynamic content, state, etc).
+
+If the number of styled component is more than 15, consider moving them to a separating them to a new file call `uiComponents.tsx`.
+
+Be aware that page component's folder name should have a suffix of `Page`.
+
+Sample component: `app/javascript/components/SweetHomePage` , `app/controllers/home_controller.rb`
+
+1. Create a new folder `ComponentNamePage` under `app/javascript/components`
+1. Create a component file `index.tsx` in that folder
+1. Create a MobX store file `ComponentNameUI.ts` in that folder
+1. Directly render this page component in controller action with `render component: 'ComponentNamePage'`
+
+[Ref](https://github.com/reactjs/react-rails/blob/master/README.md#controller-actions)
 
 ## References:
 
