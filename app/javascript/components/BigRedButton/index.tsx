@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useMemo } from "react";
 import styled from "styled-components";
+import { observer } from "mobx-react-lite";
+import BigRedButtonUI from "./BigRedButtonUI";
 
 type Props = {
   buttonColor: string;
@@ -12,12 +14,20 @@ const ButtonContainer = styled.div`
   ${({ color }) => `background-color: ${color};`};
 `;
 
-const BigRedButton = ({ buttonColor, buttonText }: Props) => {
-  return (
-    <ButtonContainer className="big-red-button-component" color={buttonColor}>
-      {buttonText}
-    </ButtonContainer>
-  );
-};
+const BigRedButton: React.FC = observer(
+  ({ buttonColor, buttonText }: Props) => {
+    const { buttonOnClick, buttonClickCounter } = useMemo(
+      () => new BigRedButtonUI(),
+      []
+    );
+
+    return (
+      <ButtonContainer className="big-red-button-component" color={buttonColor}>
+        {buttonText} {buttonClickCounter}
+        <button onClick={buttonOnClick}>+1</button>
+      </ButtonContainer>
+    );
+  }
+);
 
 export default BigRedButton;
