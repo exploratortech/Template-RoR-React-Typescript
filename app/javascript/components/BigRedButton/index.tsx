@@ -8,8 +8,8 @@ type Props = {
   buttonText: string;
 };
 
-const BigRedButton: React.FC = observer(
-  ({ buttonColor, buttonText }: Props) => {
+const BigRedButton: React.FC<Props> = observer(
+  ({ buttonColor, buttonText }) => {
     const { buttonOnClick, buttonClickCounter } = useMemo(
       () => new BigRedButtonUI(),
       []
