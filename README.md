@@ -18,10 +18,8 @@ This template is built with the following features, tools, and frameworks
 - [Start with this template](#how-to-start-with-this-template)
 - [Setup development environment](#how-to-setup-development-environment)
 - Development related
-
-  - [Create an React component](#how-to-create-an-react-component)
+  - [Create a React component](#how-to-create-a-react-component-best-practices)
   - [Set environment variables](https://medium.com/cedarcode/rails-5-2-credentials-9b3324851336)
-
 - [Reference](#references)
 
 ## How to start with this template
