@@ -12,21 +12,38 @@ Internal project template for ExploratorLabs.
 - [MobX](https://mobx.js.org/README.html)
 - Remove [Turbolinks](https://github.com/turbolinks/turbolinks)
 
-## How to use this template?
+## How to start with this template?
 
-- Folk this repo
-- Clone the repo down to your machine [How?](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-clone)
-- Install and switch your Ruby version to align with `.ruby-version`
-- Install and switch your Node version to align with `.nvmrc`
-- Run `yarn` and `bundle` to install all packages and gems
-- Regenerate master key and new credentials file with the following steps
-  - Remove `config/credentials.yml.env` file
-  - Run `EDITOR=nano rails credentials:edit` to regenerate a new credentials file and `master.key`
-- Change application's name in the following files
-  - `app/views/layouts/application.html.erb`
-  - `package.json`
-  - `config/database.yml` - development, production and test database name
-- Setup database with `bundle exec rails db:setup`
+- If you want to start a new repo from this template, click on the **Use this template** button [How?](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository)
+- If you want to contribute to this template, continue to the next step
+
+---
+
+1. Clone the repo down to your machine [How?](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-clone)
+1. Install and switch your Ruby version to align with `.ruby-version`
+1. Install and switch your Node version to align with `.nvmrc`
+1. Run `yarn` and `bundle` to install all packages and gems
+1. Regenerate master key and new credentials file with the following steps
+
+   - Remove `config/credentials.yml.env` file
+   - Run `EDITOR=nano rails credentials:edit` to regenerate a new credentials file and `master.key`
+
+1. Change application's name in the following files
+
+   - `app/views/layouts/application.html.erb`
+   - `package.json`
+   - `config/database.yml` - development, production and test database name
+
+1. Setup database with `bundle exec rails db:setup`
+
+## How to setup development environment
+
+1. Install and switch your Ruby version to align with `.ruby-version`
+1. Install and switch your Node version to align with `.nvmrc`
+1. Run `yarn` and `bundle` to install all packages and gems
+1. Setup database with `bundle exec rails db:setup`
+1. Spin up your environment with `foreman start -f Procfile.dev`
+1. Now you can access the app via `http://localhost:3000`
 
 ## Useful guides
 
