@@ -36,6 +36,15 @@ Internal project template for ExploratorLabs.
 
 1. Setup database with `bundle exec rails db:setup`
 
+## How to setup development environment
+
+1. Install and switch your Ruby version to align with `.ruby-version`
+1. Install and switch your Node version to align with `.nvmrc`
+1. Run `yarn` and `bundle` to install all packages and gems
+1. Setup database with `bundle exec rails db:setup`
+1. Spin up your environment with `foreman start -f Procfile.dev`
+1. Now you can access the app via `http://localhost:3000`
+
 ## Useful guides
 
 - How to set environment variables? [Here](https://medium.com/cedarcode/rails-5-2-credentials-9b3324851336)
