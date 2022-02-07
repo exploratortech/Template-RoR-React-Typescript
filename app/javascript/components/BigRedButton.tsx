@@ -7,9 +7,9 @@ type Props = {
 };
 
 const ButtonContainer = styled.div`
-  height: 5em;
-  width: 10em;
-  ${({ color }) => `background-color: ${color};`}
+  padding: 1em;
+  width: fit-content;
+  ${({ color }) => `background-color: ${color};`};
 `;
 
 const BigRedButton = ({ buttonColor, buttonText }: Props) => {
