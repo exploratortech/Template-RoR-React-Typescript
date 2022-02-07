@@ -63,7 +63,7 @@ In-page component is React component that is being mounted inside an `erb` page,
 
 Each component must have a MobX store which handle most of the logic of that component (e.g. onClick func, dynamic content, state, etc).
 
-If the number of styled component is more than 15, consider moving them to a separating them to a new file call `UIComponents.tsx`
+If the number of styled component is more than 15, consider moving them to a separating them to a new file call `uiComponents.tsx`
 
 Sample component: `app/javascript/components/BigRedButton` , `app/views/home/landing.html.erb`
 

@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { observer } from "mobx-react-lite";
 import BigRedButtonUI from "./BigRedButtonUI";
-import { ButtonContainer } from "./UIComponents";
+import { ButtonContainer } from "./uiComponents";
 
 type Props = {
   buttonColor: string;
