@@ -23,7 +23,7 @@ This template is built with the following features, tools, and frameworks
   - [Create a React component](#how-to-create-a-react-component-best-practices)
   - [Set environment variables](https://medium.com/cedarcode/rails-5-2-credentials-9b3324851336)
   - [CSS styling](#how-to-implement-adaptive-styling)
-  - [Liner](#linter)
+  - [Linter](#linter)
 - [Reference](#references)
 
 ## How to start with this template
