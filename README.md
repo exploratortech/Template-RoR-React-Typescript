@@ -23,6 +23,7 @@ This template is built with the following features, tools, and frameworks
   - [Create a React component](#how-to-create-a-react-component-best-practices)
   - [Set environment variables](https://medium.com/cedarcode/rails-5-2-credentials-9b3324851336)
   - [CSS styling](#how-to-implement-adaptive-styling)
+  - [Liner](#linter)
 - [Reference](#references)
 
 ## How to start with this template
@@ -57,8 +58,9 @@ This template is built with the following features, tools, and frameworks
 1. Spin up your environment with `foreman start -f Procfile.dev`
 1. Now you can access the app via `http://localhost:3000`
 1. Highly recommend install the following Extension if you are using VSCode
-   - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - auto code formatter
+   - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - auto code formatter for JavaScript
    - [Code spell checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - spell checker
+   - [Ruby Rubocop](https://marketplace.visualstudio.com/items?itemName=misogi.ruby-rubocop) - auto code formatter for Ruby
 
 ## How to create a React component (Best practices)
 
@@ -123,6 +125,11 @@ ${SuperQuery().maxWidth.sm.css`
 ```
 
 Please reference `app/javascript/components/BigRedButton/uiComponents.tsx` for sample usages.
+
+## Linter
+
+- ESlint is setup for this repo for JavaScript. Configurable with `.eslint` file.
+- RuboCop (with [Shopify's styling guide](https://ruby-style-guide.shopify.dev/)) is setup for this repo for Ruby. Configurable with `.rubocop.yml` file.
 
 ## References:
 
