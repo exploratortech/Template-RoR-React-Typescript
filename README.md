@@ -54,6 +54,9 @@ This template is built with the following features, tools, and frameworks
 1. Setup database with `bundle exec rails db:setup`
 1. Spin up your environment with `foreman start -f Procfile.dev`
 1. Now you can access the app via `http://localhost:3000`
+1. Highly recommend install the following Extension if you are using VSCode
+   - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - auto code formatter
+   - [Code spell checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - spell checker
 
 ## How to create a React component (Best practices)
 
