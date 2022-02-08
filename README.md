@@ -24,6 +24,7 @@ This template is built with the following features, tools, and frameworks
   - [Set environment variables](https://medium.com/cedarcode/rails-5-2-credentials-9b3324851336)
   - [CSS styling](#how-to-implement-adaptive-styling)
   - [Linter](#linter)
+- [Setup deployment environment]()
 - [Reference](#references)
 
 ## How to start with this template
@@ -130,6 +131,15 @@ Please reference `app/javascript/components/BigRedButton/uiComponents.tsx` for s
 
 - ESlint is setup for this repo for JavaScript. Configurable with `.eslint` file.
 - RuboCop (with [Shopify's styling guide](https://ruby-style-guide.shopify.dev/)) is setup for this repo for Ruby. Configurable with `.rubocop.yml` file.
+
+## Deployment
+
+Since we are using Rails 6, which support multi environment credentials. We can following the guide below to setup them up by environment.
+
+- Generate credentials for staging environment with `EDITOR=nano rails credentials:edit --environment staging`
+- Generate credentials for production environment with `EDITOR=nano rails credentials:edit --environment production`
+- Commit the `config/credentials/<environment>.yml.env` file to Git
+- Setup environment variables on deployment server with the `config/credentials/<environment>.key` `RAILS_PRODUCTION_KEY` or `RAILS_STAGING_KEY`
 
 ## References:
 
