@@ -12,6 +12,7 @@ This template is built with the following features, tools, and frameworks
 - Remove [Turbolinks](https://github.com/turbolinks/turbolinks)
 - [Scss](https://sass-lang.com/documentation/syntax) for styling `erb` files
 - [Styled component](https://github.com/styled-components/styled-components) on React components
+- [Super Query](https://www.npmjs.com/package/@themgoncalves/super-query) for adaptive styling with Styled Component
 
 # Content
 
@@ -20,6 +21,7 @@ This template is built with the following features, tools, and frameworks
 - Development related
   - [Create a React component](#how-to-create-a-react-component-best-practices)
   - [Set environment variables](https://medium.com/cedarcode/rails-5-2-credentials-9b3324851336)
+  - [CSS styling](#how-to-implement-adaptive-styling)
 - [Reference](#references)
 
 ## How to start with this template
@@ -92,6 +94,30 @@ Sample component: `app/javascript/components/SweetHomePage` , `app/controllers/h
 1. Directly render this page component in controller action with `render component: 'ComponentNamePage'`
 
 [Ref](https://github.com/reactjs/react-rails/blob/master/README.md#controller-actions)
+
+## How to implement (adaptive) styling
+
+### Scss files
+
+All adaptive `@mixin` are defined in `app/assets/stylesheets/breakpoints.scss`, please refer to that file to access all available `mixins`.
+
+When applying css styles to an erb page, create a scss file with the following file pattern.
+
+> `app/assets/stylesheets/views/<controllerName>/<actionName>.scss`
+
+Sample scss file: `app/assets/stylesheets/views/home/landing.scss` for `landing` action in `home` controller.
+
+### Styled components
+
+Add adaptive styling scss with Super Query.
+
+```
+${SuperQuery().maxWidth.sm.css`
+   font-weight: bold;
+`};
+```
+
+Please reference `app/javascript/components/BigRedButton/uiComponents.tsx` for sample usages.
 
 ## References:
 
