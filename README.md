@@ -13,6 +13,7 @@ This template is built with the following features, tools, and frameworks
 - [Scss](https://sass-lang.com/documentation/syntax) for styling `erb` files
 - [Styled component](https://github.com/styled-components/styled-components) on React components
 - [Super Query](https://www.npmjs.com/package/@themgoncalves/super-query) for adaptive styling with Styled Component
+- [Letter opener](https://github.com/ryanb/letter_opener) for receiving email locally
 
 # Content
 
