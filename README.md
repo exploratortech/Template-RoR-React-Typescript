@@ -43,6 +43,7 @@ This template is built with the following features, tools, and frameworks
    - `app/views/layouts/application.html.erb`
    - `package.json`
    - `config/database.yml` - development, production and test database name
+   - `.github/workflows/deployment.yml` - project name
 
 1. Setup database with `bundle exec rails db:setup`
 
