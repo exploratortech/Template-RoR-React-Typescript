@@ -24,7 +24,8 @@ This template is built with the following features, tools, and frameworks
   - [Set environment variables](https://medium.com/cedarcode/rails-5-2-credentials-9b3324851336)
   - [CSS styling](#how-to-implement-adaptive-styling)
   - [Linter](#linter)
-- [Setup deployment environment]()
+- [Setup deployment environment](#deployment)
+  - [Deployment to staging](#how-to-deploy-to-staging)
 - [Reference](#references)
 
 ## How to start with this template
@@ -140,6 +141,12 @@ Since we are using Rails 6, which support multi environment credentials. We can 
 - Generate credentials for production environment with `EDITOR=nano rails credentials:edit --environment production`
 - Commit the `config/credentials/<environment>.yml.env` file to Git
 - Setup environment variables on deployment server with the `config/credentials/<environment>.key` `RAILS_PRODUCTION_KEY` or `RAILS_STAGING_KEY`
+
+### How to deploy to staging
+
+- Ping Jack to add your ssh public kep to the staging server
+- Add the remote dokku endpoint as your Git remote with `git remote add dokku dokku@dokku.explorator.ca:<project-name>`
+- Now you can deploy by pushing your Git branch as `master` to Dokku (e.g. `git push dokku someone/2022-02-08-new-feature:master`)
 
 ## References:
 
