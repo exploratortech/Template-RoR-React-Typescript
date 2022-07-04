@@ -12,10 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Deploy the application
-        uses: landmaj/github-action-dokku@master
+        uses: dokku/github-action@master
         with:
-          PRIVATE_KEY: ${{ secrets.WORKFLOW_PRI_KEY }}
-          PUBLIC_KEY: ${{ secrets.WORKFLOW_PUB_KEY }}
-          HOST: dokku.explorator.ca
-          PROJECT: template
-          BRANCH: develop
+          ssh_private_key: ${{ secrets.WORKFLOW_PRI_KEY }}
+          git_remote_url: 'ssh://dokku@dokku.explorator.ca:22/template'
+          branch: develop
+
