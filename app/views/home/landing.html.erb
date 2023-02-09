@@ -1,3 +1,13 @@
 <h1>Hello from the other side!</h1>
 <h4>Below is a sample Typescript React MobX component living in an erb file</h4>
 <%= react_component("BigRedButton", { buttonColor: "red", buttonText: "I am a big red button" }) %>
+
+<div id="workouts-container">
+  <% @workouts.each do |workout| %>
+    <p>
+      <%= workout.distance %>km |
+      <%= workout.duration %>seconds |
+      <%= workout.pace %>km/second
+    </p>
+  <% end %>
+</div>

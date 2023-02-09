@@ -1,0 +1,15 @@
+<div id="workouts-container">
+  <% @workouts.each do |workout| %>
+    <p>
+      <%= workout.distance %>km |
+      <%= workout.duration %>seconds |
+      <%= workout.pace %>km/second
+      <%= link_to "Edit", edit_workout_path(workout) %>
+      <%= link_to "Delete", workout_path(workout), method: :delete, data: { confirm: 'Are you certain you want to delete this?' } %>
+    </p>
+  <% end %>
+
+  <%= "Please go workout, the world ain't waiting for ya" if @workouts.empty? %>
+
+  <%= link_to "New workout", new_workout_path %>
+</div>

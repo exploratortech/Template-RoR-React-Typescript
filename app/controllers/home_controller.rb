@@ -2,6 +2,8 @@
 
 class HomeController < ApplicationController
   def landing
+    @workouts = Workout.all
+    @workout = Workout.new
   end
 
   def sweet_home

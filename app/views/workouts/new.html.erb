@@ -1,0 +1,8 @@
+<div id="workout-creation-continer">
+  <%= form_with model: @workout do |form| %>
+    <%= form.text_field :distance, placeholder: "Distance" %>
+    <%= form.text_field :duration, placeholder: "Duration" %>
+    <%= form.text_field :pace, placeholder: "Pace" %>
+    <%= form.submit %>
+  <% end %>
+</div>
