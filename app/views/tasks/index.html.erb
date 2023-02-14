@@ -1,0 +1,17 @@
+<div id="tasks-container">
+  <% @tasks.each do |task| %>
+    <div class="task">
+      <p>
+        <%= task.title %>
+        <%= task.description %>
+      </p>
+
+      <p class="task-actions">
+        <%= link_to "Edit", edit_task_path(task), class: "button" %>
+        <%= link_to "Delete", task_path(task), method: :delete, class: "button" %>
+      </p>
+    </div>
+  <% end %>
+
+  <%= link_to "New Task", new_task_path, class: "button new-button" %>
+</div>

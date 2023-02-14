@@ -1,0 +1,26 @@
+// Place all the styles related to the task controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+#tasks-container {
+  .task {
+    display: flex;
+    flex-direction: row;
+
+    .task-actions {
+      margin-left: 2rem;
+    }
+  }
+
+  .button {
+    border: 1px solid black;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: darkgreen;
+  }
+
+  .new-button {
+    background-color: darkkhaki;
+  }
+}
