@@ -1,0 +1,29 @@
+<nav>
+  <a id="navbar_logo">Gym Tracker - Legs Day New Log</a>
+</nav>
+<br></br>
+<table>
+    <tr>
+        <th>Seated Leg Curl</th>
+        <th>Leg Extension</th>
+        <th>Seated Leg Press</th>
+        <th>Hip Abductor Out</th>
+        <th>Hip Abductor In</th>
+        <th>Hip Thrusts</th>
+        <th>Bulgarian Split Squats</th>
+    </tr>
+    <tr>
+        <%= form_with model: @leg do |form| %>
+            <td><%= form.text_field :seated_leg_curl, placeholder: "lb" %></td>
+            <td><%= form.text_field :leg_extension, placeholder: "lb" %></td>
+            <td><%= form.text_field :seated_leg_press, placeholder: "lb" %></td>
+            <td><%= form.text_field :hip_abductor_out, placeholder: "lb" %></td>
+            <td><%= form.text_field :hip_abductor_in, placeholder: "lb" %></td>
+            <td><%= form.text_field :hip_thrusts, placeholder: "lb" %></td>
+            <td><%= form.text_field :bulgarian_split_squats, placeholder: "lb" %></td>
+            <td><%= form.submit %></td>
+        <% end %>  
+    </tr>
+</table>
+<br></br>
+<%= link_to "Return to Legs Day Log", legs_path, class: "button" %>

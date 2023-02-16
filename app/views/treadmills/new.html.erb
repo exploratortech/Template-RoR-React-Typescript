@@ -1,0 +1,13 @@
+<table>
+    <tr>
+
+    </tr>
+    <tr>
+        <%= form_with model: @treadmill do |form| %>
+            <td><%= form.text_field :distance, placeholder: "km" %></td>
+            <td><%= form.text_field :time, placeholder: "minutes" %></td>
+            <td><%= form.text_field :avg_pace, placeholder: "km/h" %></td>
+            <td><%= form.submit %></td>
+        <% end %>  
+    </tr>
+</table>

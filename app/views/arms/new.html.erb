@@ -1,0 +1,27 @@
+<table>
+  <tr>
+    <th>Chest Press</th>
+    <th>Shoulder Press</th>
+    <th>Row/Rear Deltoid</th>
+    <th>Pull Down</th>
+    <th>Rear Deltoid</th>
+    <th>Pectoral Fly</th>
+    <th>Assisted Chin Up</th>
+    <th>Assisted Dips</th>
+  </tr>
+  <tr>
+  <%= form_with model: @arm do |form| %>
+    <td><%= form.text_field :chest_press, placeholder: "lb" %></td>
+    <td><%= form.text_field :shoulder_press, placeholder: "lb" %></td>
+    <td><%= form.text_field :row_rear_deltoid, placeholder: "lb" %></td>
+    <td><%= form.text_field :pull_down, placeholder: "lb" %></td>
+    <td><%= form.text_field :rear_deltoid, placeholder: "lb" %></td>
+    <td><%= form.text_field :pectoral_fly, placeholder: "lb" %></td>
+    <td><%= form.text_field :assisted_chin_up, placeholder: "lb" %></td>
+    <td><%= form.text_field :assisted_dips, placeholder: "lb" %></td>
+    <td><%= form.submit %></td>
+  <% end %>  
+  </tr>
+</table>
+<br></br>
+<%= link_to "Return to Arms Day Log", arms_path, class: "button" %>

@@ -1,0 +1,13 @@
+<div id="stair-master-container">
+  <% @stair_masters.each do |stair_master| %>
+    <p>
+      <%= stair_master.distance %> steps | 
+      <%= stair_master.time %> minutes |
+      <%= stair_master.pace %> steps/hour
+      <%= link_to "Edit", edit_stair_master_path(stair_master) %>
+      <%= link_to "Delete", stair_master_path(stair_master), method: :delete, data: { confirm: 'Are you certain you want to delete this?' } %>
+    </p>
+  <% end %>
+    
+  <%= link_to "Create a New Stair Master Log", new_stair_master_path, class: "button" %>
+</div>

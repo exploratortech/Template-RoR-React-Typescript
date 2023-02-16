@@ -1,5 +1,7 @@
-@include md-and-down {
-  .big-red-button-component {
-    color: blue;
-  }
+.button {
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  border-radius: 0.3rem;
+  padding: 0.2rem;
 }

@@ -1,0 +1,23 @@
+<div id="arm-edit-container">
+    <% if @error_messages.present? %>
+        <div id="error-explaination">
+            <%= pluralize(@error_messages.count, "error") %> prohibited this log from being saved: 
+            <ul> 
+                <% @error_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+    <%= form_with model: @arm do |form| %>
+        <%= form.text_field :chest_press, placeholder: "chest_press (lb)" %>
+        <%= form.text_field :shoulder_press, placeholder: "shoulder_press (lb)" %>
+        <%= form.text_field :row_rear_deltoid, placeholder: "row_rear_deltoid (lb)" %>
+        <%= form.text_field :pull_down, placeholder: "pull_down (lb)" %>
+        <%= form.text_field :rear_deltoid, placeholder: "rear_deltoid (lb)" %>
+        <%= form.text_field :pectoral_fly, placeholder: "pectoral_fly (lb)" %>
+        <%= form.text_field :assisted_chin_up, placeholder: "assisted_chin_up (lb)" %>
+        <%= form.text_field :assisted_dips, placeholder: "assisted_dips (lb)" %>
+        <%= form.submit %>
+    <% end %>  
+</div>

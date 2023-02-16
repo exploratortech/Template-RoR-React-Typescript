@@ -1,0 +1,35 @@
+<div id="leg-edit-container">
+    <% if @error_messages.present? %>
+        <div id="error-explaination">
+            <%= pluralize(@error_messages.count, "error") %> prohibited this log from being saved: 
+            <ul> 
+                <% @error_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+    <table>
+    <tr>
+        <th>Seated Leg Curl</th>
+        <th>Leg Extension</th>
+        <th>Seated Leg Press</th>
+        <th>Hip Abductor Out</th>
+        <th>Hip Abductor In</th>
+        <th>Hip Thrusts</th>
+        <th>Bulgarian Split Squats</th>
+    </tr>
+    <tr>
+        <%= form_with model: @leg do |form| %>
+            <td><%= form.text_field :seated_leg_curl, placeholder: "lb" %></td>
+            <td><%= form.text_field :leg_extension, placeholder: "lb" %></td>
+            <td><%= form.text_field :seated_leg_press, placeholder: "lb" %></td>
+            <td><%= form.text_field :hip_abductor_out, placeholder: "lb" %></td>
+            <td><%= form.text_field :hip_abductor_in, placeholder: "lb" %></td>
+            <td><%= form.text_field :hip_thrusts, placeholder: "lb" %></td>
+            <td><%= form.text_field :bulgarian_split_squats, placeholder: "lb" %></td>
+            <td><%= form.submit %></td>
+        <% end %>  
+    </tr>
+</table>
+</div>

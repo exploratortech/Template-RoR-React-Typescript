@@ -10,9 +10,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2023_02_15_161211) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "arms", force: :cascade do |t|
+    t.integer "chest_press"
+    t.integer "shoulder_press"
+    t.integer "row_rear_deltoid"
+    t.integer "pull_down"
+    t.integer "rear_deltoid"
+    t.integer "pectoral_fly"
+    t.integer "assisted_chin_up"
+    t.integer "assisted_dips"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "legs", force: :cascade do |t|
+    t.integer "seated_leg_curl"
+    t.integer "leg_extension"
+    t.integer "seated_leg_press"
+    t.integer "hip_abductor_out"
+    t.integer "hip_abductor_in"
+    t.integer "hip_thrusts"
+    t.integer "bulgarian_split_squats"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "stair_masters", force: :cascade do |t|
+    t.integer "distance"
+    t.integer "time"
+    t.integer "pace"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "treadmills", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "distance"
+    t.integer "time"
+    t.integer "avg_pace"
+    t.date "date"
+  end
 
 end

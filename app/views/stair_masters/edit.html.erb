@@ -1,0 +1,18 @@
+<div id="stair-master-edit-container">
+    <% if @error_messages.present? %>
+        <div id="error-explaination">
+            <%= pluralize(@error_messages.count, "error") %> prohibited this log from being saved: 
+            <ul> 
+                <% @error_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+    <%= form_with model: @stair_master do |form| %>
+        <%= form.text_field :distance, placeholder: "# steps" %>
+        <%= form.text_field :time, placeholder: "minutes" %>
+        <%= form.text_field :pace, placeholder: "steps/minute" %>
+        <%= form.submit %>
+    <% end %>  
+</div>

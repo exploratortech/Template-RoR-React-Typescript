@@ -1,0 +1,26 @@
+<nav>
+  <a id="navbar_logo">Gym Tracker - Treadmill Log</a>
+</nav>
+<br></br>
+<table>
+  <tr>
+    <th>Distance</th>
+    <th>Minutes</th>
+    <th>Average Pace</th>
+  </tr>
+  <tr>
+    <% @treadmills.each do |treadmill| %>
+      <tr>
+        <td><%= treadmill.distance %> km</td>
+        <td><%= treadmill.time %> minutes</td>
+        <td><%= treadmill.avg_pace %> km/h</td>
+        <td><%= link_to "Edit", edit_treadmill_path(treadmill) %></td>
+        <td><%= link_to "Delete", treadmill_path(treadmill), method: :delete, data: { confirm: 'Are you certain you want to delete this?' } %></td>
+      </tr>
+    <% end %>
+  </tr>
+</table>
+<br></br>
+<%= link_to "Create a New Treadmill Log", new_treadmill_path, class: "button" %>
+<br></br>
+<%= link_to "Return to Home Page", "/", class: "button" %>
